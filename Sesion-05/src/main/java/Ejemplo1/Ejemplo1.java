@@ -3,11 +3,15 @@ package Ejemplo1;
 import generator.RxJavaObservableGenerator;
 import io.reactivex.Single;
 
+import java.util.Collections;
+import java.util.List;
+
 public class Ejemplo1 {
-    static Single<Integer> sumarSingle(){
+    static Single<List<Integer>> sumarSingle(){
+        List<Integer> mt = Collections.emptyList();
         return RxJavaObservableGenerator
                 .observableStream()
-                .reduce(0,(a,b) -> a+b);
+                .reduce(mt ,(a, b) -> {a.add(b);return a;});
     }
 
     static Integer sumar(){
@@ -18,10 +22,10 @@ public class Ejemplo1 {
     }
 
     public static void main(String[] args) {
-        Single<Integer> si = Ejemplo1.sumarSingle();
+        Single<List<Integer>> si = Ejemplo1.sumarSingle();
         Integer i = Ejemplo1.sumar();
 
-        System.out.println("Single: "+ si.blockingGet());
+        System.out.println("Single: "+ si);
         System.out.println("Integer: "+ i);
     }
 }
