@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ejemplo1.HolderTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-04-26T02:02:59" hostname="MacBook-Pro-de-Javier.local" time="0.014">
+  <properties/>
+  <testcase name="clase()" classname="ejemplo1.HolderTest" time="0.014"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
