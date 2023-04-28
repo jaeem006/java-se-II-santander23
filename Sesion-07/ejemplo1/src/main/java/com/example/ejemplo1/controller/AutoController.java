@@ -14,11 +14,6 @@ public class AutoController {
        return "Hola Autos";
     }
 
-    @GetMapping("/auto")
-    public String saluda2(){
-        return "Hola Automoviles";
-    }
-
     @PostMapping("/auto")
     public void recibe(@RequestBody Auto auto){
         log.info(auto.toString());
